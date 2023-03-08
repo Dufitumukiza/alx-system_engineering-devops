@@ -1,84 +1,57 @@
-# Regular Expressions
-For this project I am learning how to build regular expressions using `Oniguruma`, a regular expression library which is used by `Ruby` by default.
+# Regular expression
 
-## Tasks
+In this project, I learned how to use regular expressions. I practiced building
+them using Ruby's Oniguruma library.
+
+## Tasks :page_with_curl:
+
+_Note: Each Ruby script in the project matches regular expressions based on an
+argument passed to it via the command line._
+
 * **0. Simply matching School**
-	* [0-simply_match_school.rb](./0-simply_match_school.rb): Ruby script that accepts one argument and pass it to a regular expression matching method.
-	* The regex must match `School
-
-| Test string:	| Match result:  |
-|---------------|----------------|
-| School	| `School`  	 |
-| school	| school  	 |
-| Sch0ol	| Sch0ol  	 |
-| aaahSchool	| aaah`School` 	 |
-| Schoolaaa	| `School`aaa  	 |
-
+  * [0-simply_match_scool.rb](./0-simply_match_holberton.rb): Ruby script that
+  matches the regular expression `Holberton`.
 
 * **1. Repetition Token #0**
-	* [1-repetition_token_0.rb](./1-repetition_token_0.rb): Ruby script that accepts one argument and pass it to a regular expression matching method.
-	* Find the regex that will match the below cases:
-
-| Test string:	| Match result:  |
-|---------------|----------------|
-| hbn 		| hbn 	  	 |
-| hbtn 		| hbtn 	  	 |
-| hbttn 	| `hbttn` 	 |
-| hbtttn 	| `hbtttn` 	 |
-| hbttttn 	| `hbttttn` 	 |
-| hbtttttn 	| `hbtttttn` 	 |
-| hbttttttn 	| hbttttttn 	 |
-
+  * [1-repetition_token_0.rb](./1-repetition_token_0.rb): Ruby script that matches
+  the regular expression `hbn` with between 2-5 `t`'s in between `hb` and `n`.
 
 * **2. Repetition Token #1**
-	* [2-repetition_token_1.rb](./2-repetition_token_1.rb): Ruby script that accepts one argument and pass it to a regular expression matching method.
-	* Find the regular expression that will match the below cases:
-
-| Test string:	| Match result:  |
-|---------------|----------------|
-| htn 		| `htn` 	 |
-| hbtn 		| `hbtn` 	 |
-| hbbtn 	| hbbtn 	 |
-| hbbbtn 	| hbbbtn 	 |
-
+  * [2-repetition_token_1.rb](./2-repetition_token_1.rb): Ruby script that matches
+  the regular expression `hn` with 0 or 1 occurrences of `b` and 0 or 1
+  occurrences of `t` in between `h` and `n`.
 
 * **3. Repetition Token #2**
-	* [3-repetition_token_2.rb](./3-repetition_token_2.rb): Ruby script that accepts one argument and pass it to a regular expression matching method.
-	* Find the regular expression that will match the below cases:
-
-| Test string:	| Match result:  |
-|---------------|----------------|
-| hbn 		| htn 	 	 |
-| hbtn 		| `hbtn` 	 |
-| hbttn 	| `hbbtn` 	 |
-| hbtttn 	| `hbbbtn` 	 |
-| hbttttn 	| `hbbbtn` 	 |
-
+  * [3-repetition_token_2.rb](./3-repetition_token_2.rb): Ruby script that matches
+  the regular expression `hbn` with 1 or more `t`'s in between `hb` and `n`.
 
 * **4. Repetition Token #3**
-	* [4-repetition_token_3.rb](./4-repetition_token_3.rb): Ruby script that accepts one argument and pass it to a regular expression matching method.
-	* The regex should not contain square brackets
-	* Find the regular expression that will match the below cases:
-
-| Test string:	| Match result:  |
-|---------------|----------------|
-| hbn 		| `hbn`	 	 |
-| hbon 		| hbon 	 	 |
-| hbtn 		| `hbtn` 	 |
-| hbttn		| `hbttn` 	 |
-| hbtttn	| `hbtttn` 	 |
-| hbttttn	| `hbttttn` 	 |
-
+  * [4-repetition_token_3.rb](./4-repetition_token_3.rb): Ruby script that matches the
+  regular expression `hbn` with 0 or more `t`'s in between `hb` and `n`.
 
 * **5. Not quite HBTN yet**
-	* [5-beginning_and_end.rb](./5-beginning_and_end.rb): Ruby script that accepts one argument and pass it to a regular expression matching method.
-	* Regex must be exactly matching a string that starts with `h` ends with `n` and can have any single character in between
+  * [5-beginning_and_end.rb](./5-beginning_and_end.rb): Ruby script that matches a
+  regular expression starting with `h` and ending with `n` with any single character in between.
 
+* **6. Call me maybe**
+  * [6-phone_number.rb](./6-phone_number.rb): Ruby script that matches a regular expression
+  representing a 10-digit phone number.
 
-* **6. Call me may be**
-	* [6-phone_number.rb](./6-phone_number.rb): Ruby script with regex that msut match a 10 digit number
+* **7. OMG WHY ARE YOU SHOUTING?**
+  * [7-OMG_WHY_ARE_YOU_SHOUTING.rb](./7-OMG_WHY_ARE_YOU_SHOUTING.rb): Ruby script that
+  matches regular expressions of uppercase letters.
 
-* **7. OMG WHY ARE YOU SHOUTING**
-	* [7-OMG_WHY_ARE_YOU_SHOUTING.rb](./7-OMG_WHY_ARE_YOU_SHOUTING.rb): Ruby script with regex that matches only capital letters.
+* **8. Textme**
+  * [100-textme.rb](./100-textme.rb): Ruby script that runs statistics on TextMe app text
+  message transcations.
+  * Output: `[SENDER],[RECEIVER],[FLAGS]` where
+    * `[SENDER]` is the sender phone number or name (including country code
+    if present).
+    * `[RECEIVER]` is the receiver phone number or name (including country code
+    if present).
+    * `[FLAGS]` is the flags that were used.
 
-Author: Sangwani P Zyambo <sangwani-coder>
+* **9. Pass LinkedIn technical interview level0**
+  * [101-passed_linkedin_regex_challenge.jpg](./101-passed_linkedin_regex_challenge.jpg):
+  Screenshot signifying completion of the
+  [LinkedIn Engineering Regex Puzzle](https://engineering.linkedin.com/puzzle).
